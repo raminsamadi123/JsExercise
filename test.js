@@ -99,7 +99,6 @@ character = [
     profession = prompt("Give the character a profession: ").toLowerCase()
 ];
 
-
 console.log(
     "\nHere is the story:\nOnce upon a time there was a", character[1], "called", 
     character[0] + "\nOn his/her way to work,", character[0], "often pondered what being", 
@@ -108,8 +107,53 @@ console.log(
 );
 
 ________________________________________________________
+//11. Print Variables\\
+
+let days = 200;
+let hours= 3.5;
+
+console.log(
+    "Days to summer:\n" + days + "\nHours to lunch:\n" + hours +
+    "\nCoding is fun:" + "\nIt sure is!"
+);
+
+________________________________________________________
+//12. Print Integer\\
+
+var ps = require("prompt-sync");
+var prompt = ps();
+
+let integer = parseInt(prompt("Give a number! "));
+console.log("You gave", integer);
+
+________________________________________________________
+//13. Print Double\\
+
+var ps = require("prompt-sync");
+var prompt = ps();
+
+let float = parseFloat(prompt("Give a number! "));
+
+if (typeof float === 'number' && !Number.isNaN(float) && !Number.isInteger(float)) {
+    console.log("You gave", float);
+}
+
+________________________________________________________
+
+//14. Print Truth\\
+
+var ps = require("prompt-sync");
+var prompt = ps();
+
+let boolean = prompt("Give me the truth! ");
+
+if (boolean == "true" || boolean == "false") {
+    console.log(boolean.charAt(0).toUpperCase() + boolean.slice(1));
+}
+
+________________________________________________________
+
 
 */
 
-//11. Print Variables\\
-
+//15. Asking Multiple Inputs\\
