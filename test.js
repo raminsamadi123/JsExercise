@@ -152,8 +152,55 @@ if (boolean == "true" || boolean == "false") {
 }
 
 ________________________________________________________
+//15. Asking Multiple Inputs\\
+
+var ps = require("prompt-sync");
+var prompt = ps();
+
+let string = prompt("Give a string: ");
+let integer = parseInt(prompt("Give a integer: "));
+let double = parseFloat(prompt("Give a double: "));
+let boolean = prompt("Give a boolean: ");
+
+console.log(
+    "Your string:", string + "\nYour integer:", integer + 
+    "\nYour double:", double + "\nYour boolean:", boolean
+);
+
+________________________________________________________
+//16. Seconds In Days\\
+
+var ps = require("prompt-sync");
+var prompt = ps();
+
+let days = parseInt(prompt("How many days? "));
+console.log(days * 86400); //converts days to seconds
+
+________________________________________________________
+//17. Input Two Integers\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let term1 = parseInt(prompt("Give the first number! "));
+let term2 = parseInt(prompt("Give the second number! "));
+console.log("The sum is", term1 + term2);
+
+________________________________________________________
+//18. Input Three Integers\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let term1 = parseInt(prompt("Give the first number! "));
+let term2 = parseInt(prompt("Give the second number! "));
+let term3 = parseInt(prompt("Give the third number! "));
+
+console.log("The sum is", term1 + term2 + term3);
+
+________________________________________________________
 
 
 */
 
-//15. Asking Multiple Inputs\\
+//19. Sum of Two\\
