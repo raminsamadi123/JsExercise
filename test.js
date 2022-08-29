@@ -328,7 +328,6 @@ ________________________________________________________
 
 */
 
-<<<<<<< HEAD
 //27. Stay Positive\\
 
 let ps = require("prompt-sync");
@@ -341,6 +340,5 @@ if (number >= 0) {
 }else {
     console.log("It is not positive");
 }
-=======
+
 //19. Sum of Two\\
->>>>>>> f11e424b6621a6be1f8e44741bdec5af1c6ad45f
