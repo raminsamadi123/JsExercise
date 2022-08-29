@@ -440,16 +440,12 @@ ________________________________________________________
 let ps = require("prompt-sync");
 let prompt = ps();
 
-let question;
-
 while (true) {
-    question = prompt("Do you want continue? ");
+    let question = prompt("Do you want continue? ");
     if (question === "yes" || question === "Yes") {
         break
     }else if (question === "no" || question === "No") {
         break
-    }else {
-        prompt("Do you want continue? ");
     };
 };
 
@@ -458,14 +454,11 @@ ________________________________________________________
 
 let ps = require("prompt-sync");
 let prompt = ps();
-let number;
 
 while (true) {
-    number = parseInt(prompt("Give a number: "));
+    let number = parseInt(prompt("Give a number: "));
     if (number === 42) {
         break
-    }else {
-        prompt("Give a number: ");
     };
 };
 
@@ -475,24 +468,102 @@ ________________________________________________________
 let ps = require("prompt-sync");
 let prompt = ps();
 
-let number;
-
 while (true) {
-    number = parseInt(prompt("Give a number: "));
+    let number = parseInt(prompt("Give a number: "));
     if (number > 0) {
         console.log(number ** 2);
     }else if (number < 0) {
         console.log("That is negative");
     }else if (number === 0) {
         break
-    }else {
-        parseInt(prompt("Give a number: "));
     };
 };
+
+________________________________________________________
+//37. Counting Numbers\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let numberCount = 0;
+
+while (true) {
+    let number = parseInt(prompt("Give a number: "));
+    if (number === 0) {
+        break
+    }else {
+        numberCount += 1;
+    };
+};
+
+console.log("Total amount of numbers: ", numberCount);
+
+________________________________________________________
+//38. Counting Negatives\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let negativeValues = 0;
+
+while (true) {
+    let number = parseFloat(prompt("Give a number: "));
+    
+    if (number === 0) {
+        break
+    }else if (number < 0) {
+        negativeValues += 1;
+    };
+};
+
+console.log("Total amount of negative numbers:", negativeValues);
+
+________________________________________________________
+//39. Sum of Numbers\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let sum = 0;
+
+while (true) {
+    let number = parseFloat(prompt("Give a number: "));
+    
+    if (number === 0) {
+        break
+    }else {
+        sum += number;
+    };
+};
+
+console.log("Total sum of numbers:", sum);
+
+________________________________________________________
+//40. Amount and Sum\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let totalValues = 0;
+let sum = 0;
+
+while (true) {
+    let number = parseFloat(prompt("Give a number: "));
+    
+    if (number === 0) {
+        break
+    }else {
+        sum += number;
+        totalValues += 1;
+    };
+};
+
+console.log("Total sum of numbers:", sum);
+console.log("Total amount of numbers:", totalValues);
 
 ________________________________________________________
 
 
 */
 
-//37. Counting Numbers\\
+//Ramin's calculator code\\
