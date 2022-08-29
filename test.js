@@ -199,8 +199,300 @@ let term3 = parseInt(prompt("Give the third number! "));
 console.log("The sum is", term1 + term2 + term3);
 
 ________________________________________________________
+//19. Sum of Two\\
+
+console.log("Hej"); //sträng
+console.log(2); //nummer
+console.log(true); //boolean
+console.log(false); //boolean
+
+console.log(1+2); //addition
+console.log(1-2); //subtraktion
+console.log(1*2); //multiplikation
+console.log(1/2); //division
+
+var namn = "Ramin";
+console.log(namn);
+
+namn = "Samadi";
+console.log(namn);
+
+________________________________________________________
+//20. Multiply Two\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let factor = [
+    parseInt(prompt("Give the first number! ")),    
+    parseInt(prompt("Give the second number! "))
+];
+
+console.log(factor[0], "*", factor[1], "=", factor[0] * factor[1]);
+
+________________________________________________________
+//21. Average of Two\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let term = [
+    parseInt(prompt("Give the first number! ")),    
+    parseInt(prompt("Give the second number! "))
+];
+
+console.log("The average is", (term[0] + term[1]) / 2);
+
+________________________________________________________
+//22. Average of Three\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let term = [
+    parseFloat(prompt("Give the first number! ")),    
+    parseFloat(prompt("Give the second number! ")),
+    parseFloat(prompt("Give the third number! "))
+];
+
+console.log("The average is", (term[0] + term[1] + term[2]) / 3);
+
+________________________________________________________
+//23. Tiny Calculator\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let number = [
+    parseInt(prompt("Give the first number! ")),    
+    parseInt(prompt("Give the second number! "))
+];
+
+console.log(
+    number[0], "+", number[1], "=", number[0] + number[1] + "\n" +
+    number[0], "-", number[1], "=", number[0] - number[1] + "\n" +
+    number[0], "*", number[1], "=", number[0] * number[1] + "\n" +
+    number[0], "/", number[1], "=", number[0] / number[1]
+)
+
+________________________________________________________
+//24. Speeding\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let speedMeter = parseFloat(prompt("Your speed: "));
+
+if (speedMeter > 120) {
+    console.log("Speeding!")
+};
+
+________________________________________________________
+//25. Orwell\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let birthDate = parseInt(prompt("Give your age: "));
+
+if (birthDate == 1899) {
+    console.log("You're old")
+};
+
+________________________________________________________
+//26. Too Old\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let birthDate = parseInt(prompt("Give your age: "));
+
+if (birthDate < 1900) {
+    console.log("You're old")
+};
+=======
+let term1 = parseInt(prompt("Give the first number! "));
+let term2 = parseInt(prompt("Give the second number! "));
+let term3 = parseInt(prompt("Give the third number! "));
+
+console.log("The sum is", term1 + term2 + term3);
+
+________________________________________________________
+//27. Stay Positive\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let number = parseInt(prompt("Give a number "));
+
+if (number >= 0) {
+    console.log("It is positive");
+}else if (number < 0) {
+    console.log("It is not positive");
+};
+
+________________________________________________________
+//28. Over Eighteen\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let age = parseInt(prompt("How old are you? "));
+
+if (age >= 18) {
+    console.log("You're an adult!");
+}else if (age < 18) {
+    console.log("You're underage!");
+};
+
+________________________________________________________
+//29. Larger Number\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let number = [
+    parseInt(prompt("Give the first number! ")),
+    parseInt(prompt("Give the second number! "))
+];
+
+if (number[0] > number[1]) {
+    console.log("The larger number is", number[0] + "!");
+}else if (number[1] > number[0]) {
+    console.log("The larger number is", number[1] + "!");
+}else {
+    console.log("They are equal!");
+};
+
+________________________________________________________
+//30. Course Grading\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let percent = parseInt(prompt("Give your percent [0 - 100]: "));
+
+if (percent < 0) {
+    console.log("Impossible");
+}else if (percent < 50) {
+    console.log("Fail");
+}else if (percent < 60) {
+    console.log("Grade: 1");
+}else if (percent < 70) {
+    console.log("Grade: 2");
+}else if (percent < 80) {
+    console.log("Grade: 3");
+}else if (percent < 90) {
+    console.log("Grade: 4");
+}else if (percent <= 100) {
+    console.log("Grade: 5");
+}else if (percent > 100) {
+    console.log("Outstanding!");
+};
+
+________________________________________________________
+//31. Even or Odd\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let number = parseInt(prompt("Give a number: "));
+
+if (number % 2 === 0) {
+    console.log("It is even.");
+}else if (number % 2 === 1) {
+    console.log("It is odd.");
+};
+
+________________________________________________________
+//32. Enter Friend\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let question = prompt("Speak, friend, and enter! ");
+
+if (question === "Mellon") {
+    console.log("Welcome, friend");
+}else {
+    console.log("They've got a cave troll!");
+};
+
+________________________________________________________
+//33. Echo\\
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let string = [
+    prompt("Give the first string: "),
+    prompt("Give the second string: ")
+];
+
+if (string[0] === string[1]) {
+    console.log("Echo");
+}else {
+    console.log("Nej");
+};
+
+________________________________________________________
+//34. Continue\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let question;
+
+while (true) {
+    question = prompt("Do you want continue? ");
+    if (question === "yes" || question === "Yes") {
+        break
+    }else if (question === "no" || question === "No") {
+        break
+    }else {
+        prompt("Do you want continue? ");
+    };
+};
+
+________________________________________________________
+//35. Answer to Life\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+let number;
+
+while (true) {
+    number = parseInt(prompt("Give a number: "));
+    if (number === 42) {
+        break
+    }else {
+        prompt("Give a number: ");
+    };
+};
+
+________________________________________________________
+//36. Power of Positivity\\
+
+let ps = require("prompt-sync");
+let prompt = ps();
+
+let number;
+
+while (true) {
+    number = parseInt(prompt("Give a number: "));
+    if (number > 0) {
+        console.log(number ** 2);
+    }else if (number < 0) {
+        console.log("That is negative");
+    }else if (number === 0) {
+        break
+    }else {
+        parseInt(prompt("Give a number: "));
+    };
+};
+
+________________________________________________________
 
 
 */
 
-//19. Sum of Two\\
+//37. Counting Numbers\\
