@@ -182,12 +182,18 @@ ________________________________________________________
 let ps = require("prompt-sync");
 let prompt = ps();
 
+<<<<<<< HEAD
 let term = [
     parseInt(prompt("Give the first number! ")),
     parseInt(prompt("Give the second number! "))
 ];
 
 console.log("The sum is", term[0] + term[1]);
+=======
+let term1 = parseInt(prompt("Give the first number! "));
+let term2 = parseInt(prompt("Give the second number! "));
+console.log("The sum is", term1 + term2);
+>>>>>>> f11e424b6621a6be1f8e44741bdec5af1c6ad45f
 
 ________________________________________________________
 //18. Input Three Integers\\
@@ -195,6 +201,7 @@ ________________________________________________________
 let ps = require("prompt-sync");
 let prompt = ps();
 
+<<<<<<< HEAD
 let term = [
     parseInt(prompt("Give the first number! ")),
     parseInt(prompt("Give the second number! ")),
@@ -308,12 +315,20 @@ let birthDate = parseInt(prompt("Give your age: "));
 if (birthDate < 1900) {
     console.log("You're old")
 };
+=======
+let term1 = parseInt(prompt("Give the first number! "));
+let term2 = parseInt(prompt("Give the second number! "));
+let term3 = parseInt(prompt("Give the third number! "));
+
+console.log("The sum is", term1 + term2 + term3);
+>>>>>>> f11e424b6621a6be1f8e44741bdec5af1c6ad45f
 
 ________________________________________________________
 
 
 */
 
+<<<<<<< HEAD
 //27. Stay Positive\\
 
 let ps = require("prompt-sync");
@@ -326,3 +341,6 @@ if (number >= 0) {
 }else {
     console.log("It is not positive");
 }
+=======
+//19. Sum of Two\\
+>>>>>>> f11e424b6621a6be1f8e44741bdec5af1c6ad45f
