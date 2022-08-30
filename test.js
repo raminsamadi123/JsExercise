@@ -562,8 +562,29 @@ console.log("Total sum of numbers:", sum);
 console.log("Total amount of numbers:", totalValues);
 
 ________________________________________________________
+//Ramin's calculator code\\
 
+let ps = require("prompt-sync");
+let prompt = ps();
+
+console.log("\nHello and welcome to my first self-coded calculator.\nIn order for this calculator to work you have to input 2 values and choose your operator. \nIf you want to exit this program input 0 in the console.\n")
+
+while (true) {
+    let number1 = parseFloat(prompt("Input your 1st value: ")); if (number1 === 0) {break};
+    let operator = prompt("Choose between these operators: (+-/^*) "); if (operator == "0") {break};
+    let number2 = parseFloat(prompt("Input your 2nd value: ")); if (number2 === 0) {break};
+    
+    if (operator === "+") {
+        console.log(number1 + number2 + "\n");
+    }else if (operator === "-") {
+        console.log(number1 - number2 + "\n");
+    }else if (operator === "*") {
+        console.log(number1 * number2 + "\n");
+    }else if (operator === "/") {
+        console.log(number1 / number2 + "\n");
+    }else if (operator === "^") {
+        console.log(number1 ** number2 + "\n");
+    };
+};
 
 */
-
-//Ramin's calculator code\\
