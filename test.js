@@ -600,10 +600,38 @@ function bubbleSort(array) {
         };
     };
     return arr;
+
+________________________________________________________
+//For Of Loops\\
+
+const names = ["John", "Bob", "Mary", "Joe"];
+
+for (name of names) {
+    console.log(name);
+};
+
+//For in Loops\\
+const user = {"firstName:": "John", "lastName": "Doe"};
+
+for (key in user) {
+    console.log(user[key]);
+};
 };
 
 const arr = [4, 2, 1, 6];
 console.log("Old array:", arr);
 console.log("New array:", bubbleSort(arr));
+
+//For Each Loops\\
+const animals = ["cat", "dog", "horse", "sheep", "bird"];
+
+animals.forEach(animal => {
+    console.log(animal);
+});
+
+break //breaks out of a loop
+continue // skips the current loop and moves to the next loop
+console.log(`The number is ${i}`); // write text without , or +
+________________________________________________________
 
 */
