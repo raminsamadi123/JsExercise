@@ -567,14 +567,14 @@ ________________________________________________________
 let ps = require("prompt-sync");
 let prompt = ps();
 
-console.log("\nHello and welcome to my first self-coded calculator.\nIn order for this calculator to work you have to input 2 values and choose your operator. \nIf you want to exit this program input 0 in the console.\n")
+console.log("\nHello and welcome to my first self-coded calculator.\nIn order for this calculator to work you have to input 2 values and choose your operator. \nIf you want to exit this program input 0 in the console and confirm with your enter key.\n")
 
-while (true) {
+while (true) { 
     let number1 = parseFloat(prompt("Input your 1st value: ")); if (number1 === 0) {break};
     let operator = prompt("Choose between these operators: (+-/^*) "); if (operator == "0") {break};
     let number2 = parseFloat(prompt("Input your 2nd value: ")); if (number2 === 0) {break};
     
-    if (operator === "+") {
+    if (operator === "+") { //kan förbättras genom att göra en array som heter operators
         console.log(number1 + number2 + "\n");
     }else if (operator === "-") {
         console.log(number1 - number2 + "\n");
@@ -587,4 +587,302 @@ while (true) {
     };
 };
 
+________________________________________________________
+//Sortera en array med siffror\\
+
+function bubbleSort(array) {
+    const arr = array.slice();
+    for (i = 0; i < arr.length -1; i++) {
+        for (j = 0; j < arr.length - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            };
+        };
+    };
+    return arr;
+
+________________________________________________________
+//For Of Loops\\
+
+const names = ["John", "Bob", "Mary", "Joe"];
+
+for (name of names) {
+    console.log(name);
+};
+
+//For in Loops\\
+const user = {"firstName:": "John", "lastName": "Doe"};
+
+for (key in user) {
+    console.log(user[key]);
+};
+};
+
+const arr = [4, 2, 1, 6];
+console.log("Old array:", arr);
+console.log("New array:", bubbleSort(arr));
+
+//For Each Loops\\
+const animals = ["cat", "dog", "horse", "sheep", "bird"];
+
+animals.forEach(animal => {
+    console.log(animal);
+});
+
+break //breaks out of a loop
+continue // skips the current loop and moves to the next loop
+console.log(`The number is ${i}`); // write text without , or +
+________________________________________________________
+//Filter Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const itemNames = items.filter((item) => {
+    return item.price <= 100;
+});
+
+console.log(items)
+console.log(filteredItems);
+
+________________________________________________________
+//Map Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const itemNames = items.map((item) => {
+    return item.name;
+});
+
+console.log(itemNames);
+
+________________________________________________________
+//Find Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const foundItem = items.find((item) => {
+    return item.name === "Album";
+});
+
+console.log(foundItem);
+
+________________________________________________________
+//For Each\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+items.forEach((item) => {
+    console.log(item.price);
+});
+
+________________________________________________________
+//Some Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const hasInexpensiveItems = items.some((item) => {
+    return item.price <= 100;
+});
+
+console.log(hasInexpensiveItems);
+
+________________________________________________________
+//Every Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const hasInexpensiveItems = items.every((item) => {
+    return item.price <= 1000;
+});
+
+console.log(hasInexpensiveItems);
+
+________________________________________________________
+//Reduce Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const total = items.reduce((currentTotal, item) => {
+    return item.price + currentTotal;
+}, 0);
+
+console.log(total);
+
+________________________________________________________
+//Includes Method\\
+
+const items = [1, 2, 3, 4, 5];
+
+const includesTwo = items.includes(3);
+
+console.log(includesTwo);
+
+________________________________________________________
+//Index Of\\
+
+const schedules = ["Wake up", "Eat", "Film a video", "Watch things on netflix"];
+
+console.log(schedules.indexOf("Film a video"));
+
+________________________________________________________
+//Objects\\
+
+const person = new Object();
+
+person.name = "Daniel";
+person.eyeColor = "Blue";
+person.age = 27;
+person.updateAge = function() {
+    return ++person.age;
+}
+
+console.log(person.age);
+person.updateAge();
+console.log(person.age);
+
+const person = {
+    name: "Daniel", 
+    eyeColor: "Blue",
+    age: 27,
+    updateAge: function() {return ++person.age;}
+};
+
+console.log(person);
+
+// object literals
+
+let user = {
+    name: "Crystal",
+    age: 30,
+    email: "crystal@thenetninja.co.uk",
+    location: "Berlin",
+    blogs: ["Why mac & cheese rules", "10 things to make with marmite"]
+};
+
+// user.age = 35;
+
+console.log(user.age);
+
+console.log(user["location"]);
+user["name"] = "chun-li";
+console.log(user["name"]);
+
+console.log(typeof user);
+
+// object literals
+
+const blogs = [
+    { title: "Why mac & cheese rules", likes: 30 },
+    { title: "10 things to make with marmite", likes: 50 },
+];
+
+console.log(blogs);
+
+let user = {
+    name: "Crystal",
+    age: 30,
+    email: "crystal@thenetninja.co.uk",
+    location: "Berlin",
+    blogs: [
+        { title: "Why mac & cheese rules", likes: 30 },
+        { title: "10 things to make with marmite", likes: 50 },
+    ],
+    login() {console.log("the user logged in");},
+    logout() {console.log("the user logged out");},
+    logBlogs() {
+        console.log("This user has written the following blogs:");
+
+        this.blogs.forEach(blog => {
+            console.log(blog.title, blog.likes);
+        });
+    }
+};
+
+user.logBlogs();
+user.login();
+user.logout();
+
+
+const name = "mario";
+console.log(name.toUpperCase());
+
+
+
 */
+
+// Math Object
+
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.E);
+
+const area = 7.2;
+
+console.log(Math.round(area)); // Rounds the value to the closest interger
+console.log(Math.floor(area)); // Rounds the value to the lowest number
+console.log(Math.ceil(area)); // Rounds the value to the highest number
+console.log(Math.trunc(area)); // Removes what's after the decimal point
+
+// random numbers
+
+const randomNumber = Math.random(); //Random number between 0-1
+console.log(Math.round(randomNumber * 100)); // Random number between 1-100
+
+//YouTube Video Modern JavaScript Tutorial #5 - Objects
+// https://youtu.be/X0ipw1k7ygU?t=1673
