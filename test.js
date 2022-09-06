@@ -567,14 +567,14 @@ ________________________________________________________
 let ps = require("prompt-sync");
 let prompt = ps();
 
-console.log("\nHello and welcome to my first self-coded calculator.\nIn order for this calculator to work you have to input 2 values and choose your operator. \nIf you want to exit this program input 0 in the console.\n")
+console.log("\nHello and welcome to my first self-coded calculator.\nIn order for this calculator to work you have to input 2 values and choose your operator. \nIf you want to exit this program input 0 in the console and confirm with your enter key.\n")
 
-while (true) {
+while (true) { 
     let number1 = parseFloat(prompt("Input your 1st value: ")); if (number1 === 0) {break};
     let operator = prompt("Choose between these operators: (+-/^*) "); if (operator == "0") {break};
     let number2 = parseFloat(prompt("Input your 2nd value: ")); if (number2 === 0) {break};
     
-    if (operator === "+") {
+    if (operator === "+") { //kan förbättras genom att göra en array som heter operators
         console.log(number1 + number2 + "\n");
     }else if (operator === "-") {
         console.log(number1 - number2 + "\n");
@@ -633,5 +633,151 @@ break //breaks out of a loop
 continue // skips the current loop and moves to the next loop
 console.log(`The number is ${i}`); // write text without , or +
 ________________________________________________________
+//Filter Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const itemNames = items.filter((item) => {
+    return item.price <= 100;
+});
+
+console.log(items)
+console.log(filteredItems);
+
+________________________________________________________
+//Map Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const itemNames = items.map((item) => {
+    return item.name;
+});
+
+console.log(itemNames);
+
+________________________________________________________
+//Find Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const foundItem = items.find((item) => {
+    return item.name === "Album";
+});
+
+console.log(foundItem);
+
+________________________________________________________
+//For Each\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+items.forEach((item) => {
+    console.log(item.price);
+});
+
+________________________________________________________
+//Some Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const hasInexpensiveItems = items.some((item) => {
+    return item.price <= 100;
+});
+
+console.log(hasInexpensiveItems);
+
+________________________________________________________
+//Every Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const hasInexpensiveItems = items.every((item) => {
+    return item.price <= 1000;
+});
+
+console.log(hasInexpensiveItems);
+
+________________________________________________________
+//Reduce Method\\
+
+const items = [
+    { name: "Bike",     price: 100  },
+    { name: "TV",     price: 200  },
+    { name: "Album",     price: 10   },
+    { name: "Book",     price: 5    },
+    { name: "Phone",     price: 500  },
+    { name: "Computer",     price: 1000 },
+    { name: "Keyboard",     price: 25   }
+];
+
+const total = items.reduce((currentTotal, item) => {
+    return item.price + currentTotal;
+}, 0);
+
+console.log(total);
+
+________________________________________________________
+//Includes Method\\
+
+const items = [1, 2, 3, 4, 5];
+
+const includesTwo = items.includes(3);
+
+console.log(includesTwo);
+
+________________________________________________________
+//Index Of\\
+
+const schedules = ["Wake up", "Eat", "Film a video", "Watch things on netflix"];
+
+console.log(schedules.indexOf("Film a video"));
 
 */
