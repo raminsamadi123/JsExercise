@@ -862,10 +862,6 @@ user.logout();
 const name = "mario";
 console.log(name.toUpperCase());
 
-
-
-*/
-
 // Math Object
 
 console.log(Math);
@@ -884,5 +880,25 @@ console.log(Math.trunc(area)); // Removes what's after the decimal point
 const randomNumber = Math.random(); //Random number between 0-1
 console.log(Math.round(randomNumber * 100)); // Random number between 1-100
 
-//YouTube Video Modern JavaScript Tutorial #5 - Objects
-// https://youtu.be/X0ipw1k7ygU?t=1673
+// primitive values
+
+let scoreOne = 50;
+const scoreTwo = scoreOne;
+
+console.log(`scoreOne: ${scoreOne} scoreTwo: ${scoreTwo}`);
+
+scoreOne = 100
+console.log(`scoreOne: ${scoreOne} scoreTwo: ${scoreTwo}`);
+
+// reference values
+
+const userOne = { name: "ryu", age: 30 };
+const userTwo = userOne;
+
+console.log(userOne, userTwo);
+
+userOne.name = "chun-li";
+
+console.log(userOne, userTwo);
+
+*/
