@@ -780,4 +780,334 @@ const schedules = ["Wake up", "Eat", "Film a video", "Watch things on netflix"];
 
 console.log(schedules.indexOf("Film a video"));
 
+________________________________________________________
+//Objects\\
+
+const person = new Object();
+
+person.name = "Daniel";
+person.eyeColor = "Blue";
+person.age = 27;
+person.updateAge = function() {
+    return ++person.age;
+}
+
+console.log(person.age);
+person.updateAge();
+console.log(person.age);
+
+const person = {
+    name: "Daniel", 
+    eyeColor: "Blue",
+    age: 27,
+    updateAge: function() {return ++person.age;}
+};
+
+console.log(person);
+
+// object literals
+
+let user = {
+    name: "Crystal",
+    age: 30,
+    email: "crystal@thenetninja.co.uk",
+    location: "Berlin",
+    blogs: ["Why mac & cheese rules", "10 things to make with marmite"]
+};
+
+// user.age = 35;
+
+console.log(user.age);
+
+console.log(user["location"]);
+user["name"] = "chun-li";
+console.log(user["name"]);
+
+console.log(typeof user);
+
+// object literals
+
+const blogs = [
+    { title: "Why mac & cheese rules", likes: 30 },
+    { title: "10 things to make with marmite", likes: 50 },
+];
+
+console.log(blogs);
+
+let user = {
+    name: "Crystal",
+    age: 30,
+    email: "crystal@thenetninja.co.uk",
+    location: "Berlin",
+    blogs: [
+        { title: "Why mac & cheese rules", likes: 30 },
+        { title: "10 things to make with marmite", likes: 50 },
+    ],
+    login() {console.log("the user logged in");},
+    logout() {console.log("the user logged out");},
+    logBlogs() {
+        console.log("This user has written the following blogs:");
+
+        this.blogs.forEach(blog => {
+            console.log(blog.title, blog.likes);
+        });
+    }
+};
+
+user.logBlogs();
+user.login();
+user.logout();
+
+
+const name = "mario";
+console.log(name.toUpperCase());
+
+// Math Object
+
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.E);
+
+const area = 7.2;
+
+console.log(Math.round(area)); // Rounds the value to the closest interger
+console.log(Math.floor(area)); // Rounds the value to the lowest number
+console.log(Math.ceil(area)); // Rounds the value to the highest number
+console.log(Math.trunc(area)); // Removes what's after the decimal point
+
+// random numbers
+
+const randomNumber = Math.random(); //Random number between 0-1
+console.log(Math.round(randomNumber * 100)); // Random number between 1-100
+
+// primitive values
+
+let scoreOne = 50;
+const scoreTwo = scoreOne;
+
+console.log(`scoreOne: ${scoreOne} scoreTwo: ${scoreTwo}`);
+
+scoreOne = 100
+console.log(`scoreOne: ${scoreOne} scoreTwo: ${scoreTwo}`);
+
+// reference values
+
+const userOne = { name: "ryu", age: 30 };
+const userTwo = userOne;
+
+console.log(userOne, userTwo);
+
+userOne.name = "chun-li";
+
+console.log(userOne, userTwo);
+
+________________________________________________________
+//1. Finns talet i givna intervallet\\
+
+const prompt = require("prompt-sync") ();
+
+const inputNumber = parseInt(prompt("Input your number: "));
+const intervalStart = parseInt(prompt("Input the start of the interval: "));
+const intervalEnd = parseInt(prompt("Input the end of the interval: "));
+
+if (inputNumber >= intervalStart && inputNumber <= intervalEnd) {
+    console.log("Within the interval");
+} else {
+    console.log("Outside the interval");
+};
+
+________________________________________________________
+//2. Kontrollera om året är skottår eller inte\\
+
+const prompt = require("prompt-sync") ();
+
+const year = parseInt(prompt("What year is it? "));
+
+if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+    console.log(year, "is a leap year");
+} else {
+    console.log(year, "is not a leap year");
+};
+
+________________________________________________________
+//3. Skriv antalet dagar i en månad\\
+
+const prompt = require("prompt-sync") ();
+ 
+const yearInput = parseInt(prompt("Input year: "));
+const monthInput = parseInt(prompt("Input month: "));
+ 
+function getDaysInMonth(year, month) {
+    return new Date(year, month, 0).getDate();
+}
+ 
+const daysInMonth = getDaysInMonth(yearInput, monthInput);
+console.log(daysInMonth);
+
+________________________________________________________
+//4. Största siffran\\
+
+const prompt = require("prompt-sync") ();
+ 
+const userNumberInputs = [
+    parseFloat(prompt("Input your first number: ")),
+    parseFloat(prompt("Input your second number: ")),
+    parseFloat(prompt("Input your third number: "))
+];
+ 
+const largestNumber = Math.max(userNumberInputs[0], userNumberInputs[1], userNumberInputs[2]);
+ 
+console.log("The largest number is " + largestNumber);
+
+________________________________________________________
+//5. Sortering\\
+
+const prompt = require("prompt-sync") ();
+ 
+const userNumberInputs  = [
+    parseFloat(prompt("Input your first number: ")),
+    parseFloat(prompt("Input your second number: ")),
+    parseFloat(prompt("Input your third number: "))
+];
+ 
+console.log(userNumberInputs.sort().reverse());
+
+________________________________________________________
+//6. Växande eller avtagande\\
+
+const prompt = require("prompt-sync") ();
+ 
+const userNumberInputs  = [
+    parseFloat(prompt("Input your first number: ")),
+    parseFloat(prompt("Input your second number: ")),
+    parseFloat(prompt("Input your third number: "))
+];
+ 
+if ((userNumberInputs[0] < userNumberInputs[1] && userNumberInputs[1] < userNumberInputs[2]) || userNumberInputs[1] < userNumberInputs[2]) {
+    console.log("Increasing");
+}else if ((userNumberInputs[0] > userNumberInputs[1] && userNumberInputs[1] > userNumberInputs[2]) || userNumberInputs[1] > userNumberInputs[2]) {
+    console.log("Decreasing")
+} else {
+    console.log("Neither increasing nor decreasing");
+};
+
+________________________________________________________
+//7. Bokstav, tal eller specialtecken\\
+
+const prompt = require("prompt-sync") ();
+ 
+let invalidInput = true;
+const input = prompt("Input your letter, number or special character here: ");
+const specialCharacters = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+const lowerCase = /abcdefghijklmnopqrstuvwxyzåäö/;
+ 
+ 
+function isLowerCaseOrUpperCase() {
+    if (input == input.toLowerCase() && isNaN(parseInt(input)) && !specialCharacters.test(input) && lowerCase.test(input)) {
+        console.log("Lowercase");
+        invalidInput = false
+    }else if (input == input.toUpperCase()  && isNaN(parseInt(input)) && !specialCharacters.test(input) && lowerCase.test(input)) {
+        console.log("Uppercase");
+        invalidInput = false
+    };
+};
+ 
+function isConsonantOrVowel() {
+    if (input.toUpperCase() === "A" || input.toUpperCase() === "E" || input.toUpperCase() === "I" || input.toUpperCase() === "O" || input.toUpperCase() === "U" || input.toUpperCase() === "Y" || input.toUpperCase() === "Å" || input.toUpperCase() === "Ä" || input.toUpperCase() === "Ö") {
+        console.log("It is a vowel");
+        invalidInput = false
+    }else if (input.toUpperCase() === "B" || input.toUpperCase() === "C" || input.toUpperCase() === "D" || input.toUpperCase() === "F" || input.toUpperCase() === "G" || input.toUpperCase() === "H" || input.toUpperCase() === "J" || input.toUpperCase() === "K" || input.toUpperCase() === "L" || input.toUpperCase() === "M" || input.toUpperCase() === "N" || input.toUpperCase() === "P" || input.toUpperCase() === "Q" || input.toUpperCase() === "R" || input.toUpperCase() === "S" || input.toUpperCase() === "T" || input.toUpperCase() === "V" || input.toUpperCase() === "W" || input.toUpperCase() === "X" || input.toUpperCase() === "Z" && isNaN(parseInt(input))) {
+        console.log("It is a consonant");
+        invalidInput = false
+    };
+};
+ 
+function isPositivOrNegative() {
+    if (parseFloat(input) >= 0  && !isNaN(parseInt(input))) {
+        console.log("Positive");
+        invalidInput = false
+    }else if (parseFloat(input) < 0  && !isNaN(parseInt(input))) {
+        console.log("Negative");
+        invalidInput = false
+    };
+};
+ 
+function isEvenOrOdd() {
+    if (parseFloat(input) % 2 === 0 && !isNaN(parseInt(input))) {
+        console.log("Even");
+        invalidInput = false
+    }else if (!isNaN(parseInt(input))) {
+        console.log("Odd");
+        invalidInput = false
+    };
+};
+ 
+ 
+function containSpecialCharacter() {
+    if (specialCharacters.test(input)) {
+        console.log("Special character");
+        invalidInput = false
+    }
+}
+ 
+ 
+isLowerCaseOrUpperCase()
+isConsonantOrVowel();
+isPositivOrNegative();
+isEvenOrOdd();
+containSpecialCharacter();
+ 
+if (invalidInput) {console.log("Invalid Input!");};
+
+________________________________________________________
+//8. Veckonummer\\
+
+const prompt = require("prompt-sync") ();
+console.log("Input a date to know which week it was, structure it like this: \nSep 25\n")
+const dateInput = prompt("> ");
+ 
+const currentDate = new Date(dateInput);
+const startDate = new Date(currentDate.getFullYear(), 0, 1);
+const days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
+ 
+const weekNumber = Math.ceil(days / 7);
+ 
+console.log(`Week number of ${dateInput} is: ${weekNumber}`);
+
+________________________________________________________
+//9. Giltig triangel\\
+
+const prompt = require("prompt-sync") ();
+ 
+const triangle = {
+    A: prompt("Input A for your triangle: "),
+    B: prompt("Input B for your triangle: "),
+    C: prompt("Input C for your triangle: ")
+};
+ 
+if (triangle.A < triangle.B && triangle.B < triangle.A + triangle.C && triangle.C < triangle.A + triangle.B) {
+    console.log("This is a valid triangle!");
+}else {
+    console.log("This is not a valid triangle!");
+};
+
+________________________________________________________
+//10. Beräkna elkostnad\\
+
+const prompt = require("prompt-sync") ();
+ 
+const kiloWatt = prompt("how many kilowatts has your house consumed? ");
+let totalCost = 0;
+ 
+if (kiloWatt <= 50) {
+    totalCost += kiloWatt * 0.5;
+}else if (kiloWatt <= 100) {
+    totalCost += kiloWatt * 0.77;
+}else if (kiloWatt >= 250) {
+    totalCost += kiloWatt * 1.7 + (totalCost * 0.8);
+};
+ 
+console.log(`Your total cost will be ${totalCost} SEK`);
+
+________________________________________________________
 */
