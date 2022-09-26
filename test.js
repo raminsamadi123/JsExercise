@@ -1110,4 +1110,30 @@ if (kiloWatt <= 50) {
 console.log(`Your total cost will be ${totalCost} SEK`);
 
 ________________________________________________________
+//1. Första 10 naturliga tal\\
+
+for (i = 1; i <= 10; i++) {
+    console.log(i);
+};
+
+________________________________________________________
+//2. Första n naturliga tal\\
+
+const prompt = require("prompt-sync")();
+const n = parseInt(prompt("Input a number: "));
+
+for (i = 1; i <= n; i++) {
+    console.log(i);
+};
+
+________________________________________________________
+//3. Summa\\
+
+const prompt = require("prompt-sync")();
+const number = parseInt(prompt("Input a number: "));
+
+console.log(number * (number + 1) / 2)
+
+________________________________________________________
+
 */
