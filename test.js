@@ -1135,5 +1135,139 @@ const number = parseInt(prompt("Input a number: "));
 console.log(number * (number + 1) / 2)
 
 ________________________________________________________
+//4. Multiplikationstabellen\\
+
+const prompt = require("prompt-sync")();
+const number = parseInt(prompt("Input a number: "));
+
+for (i = 1; i <= 10; i++) {
+    console.log(number, "*", i, "=", number * i);
+};
+
+________________________________________________________
+//5. Pattern 1\\
+
+const prompt = require("prompt-sync")();
+const number = parseInt(prompt("Input a number: "));
+let i = 0;
+
+while (i < number) {
+    i++;
+    console.log("#".repeat(number));
+};
+
+________________________________________________________
+//6. Pattern 2\\
+
+let n = 5; // height of pattern
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= n - i + 1; j++) {
+    string += n - j - i + 2;
+  }
+  string += "\n";
+}
+console.log(string);
+
+________________________________________________________
+//7. Palindrome\\
+
+const prompt = require("prompt-sync")();
+let userInput = prompt("Input a palindrome example (lol, 121): ");
+
+const revVlaue = () => {
+    const myStrVal = userInput.toString();
+    const myRevVal = userInput.toString().split("").reverse().join("");
+
+        if (myStrVal == myRevVal) {
+            console.log(userInput, "is a palindrome");
+        } else {
+            console.log(userInput, "is not a palindrome");
+        };
+};
+
+revVlaue();
+
+________________________________________________________
+//8. Permutation\\
+
+const getPermutations = array => {
+
+    const output = [];
+
+    const swapInPlace = (arrayToSwap, indexA, indexB) => {
+        const temp = arrayToSwap[indexA];
+        arrayToSwap[indexA] = arrayToSwap[indexB];
+        arrayToSwap[indexB] = temp;
+    };
+
+    const generate = (number, heapArray) => {
+        if (number === 1) {
+            output.push(heapArray.slice());
+            return;
+        };
+
+        generate(number - 1, heapArray);
+
+        for (let i = 0; i < number - 1; i++) {
+            if (number % 2 === 0) {
+                swapInPlace(heapArray, i, number - 1);
+            } else {
+                swapInPlace(heapArray, 0, number - 1);
+            };
+
+            generate(number - 1, heapArray);
+        };
+    };
+
+    generate(array.length, array.slice());
+
+    return output;
+};
+
+
+const myArray = [1, 2];
+console.log(getPermutations(myArray));
+
+________________________________________________________
+//9. Pattern 3\\
+
+let n = 5;
+let string = "";
+for (let i = 1; i <= n; i++) {
+  for (let j = 0; j < i; j++) {
+    string += "*";
+  }
+  string += "\n";
+}
+for (let i = 1; i <= n - 1; i++) {
+  for (let j = 0; j < n - i; j++) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
+
+________________________________________________________
+//10. Fibonacci sequence\\
+
+const prompt = require("prompt-sync")();
+const number = parseInt(prompt("Give a number: "));
+
+function fibonacci(n) {
+    const fib = [0, 1];
+    let i = 2;
+    while (i < n) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+        i++;
+    };
+    return fib;
+};
+
+console.log(fibonacci(number));
+
+________________________________________________________
+
 
 */
