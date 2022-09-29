@@ -1159,15 +1159,22 @@ while (i < number) {
 ________________________________________________________
 //6. Pattern 2\\
 
-let n = 5; // height of pattern
+const prompt = require("prompt-sync")();
+const number = parseInt(prompt("Input a number: "));
 let string = "";
-// External loop
-for (let i = 1; i <= n; i++) {
-  for (let j = 1; j <= n - i + 1; j++) {
-    string += n - j - i + 2;
-  }
-  string += "\n";
+let i = 1
+
+while(i <= number) {
+    let j = 1;
+    while (j <= number - i + 1) {
+        string += number - j - i + 2;
+        j++;
+    };
+    string += "\n";
+
+    i++;
 }
+
 console.log(string);
 
 ________________________________________________________
@@ -1233,21 +1240,32 @@ console.log(getPermutations(myArray));
 ________________________________________________________
 //9. Pattern 3\\
 
-let n = 5;
+const prompt = require("prompt-sync")();
+const number = parseInt(prompt("Input a number in order to create a right pascal star pattern: "));
 let string = "";
-for (let i = 1; i <= n; i++) {
-  for (let j = 0; j < i; j++) {
-    string += "*";
-  }
-  string += "\n";
+let i = 1;
+
+while (i <= number) {
+    let j = 0;
+    while (j < i) {
+        string += "*";
+        j++;
+    }
+    string += "\n";
+    i++;
 }
-for (let i = 1; i <= n - 1; i++) {
-  for (let j = 0; j < n - i; j++) {
-    string += "*";
-  }
-  string += "\n";
+i = 1;
+while (i <= number - 1) {
+    let j = 0;
+    while (j < number - i) {
+        string += "*";
+        j++;
+    }
+    string += "\n";
+    i++;
 }
-console.log(string);
+
+console.log(string)
 
 ________________________________________________________
 //10. Fibonacci sequence\\
@@ -1268,6 +1286,4 @@ function fibonacci(n) {
 console.log(fibonacci(number));
 
 ________________________________________________________
-
-
 */
