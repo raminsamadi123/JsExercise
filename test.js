@@ -1241,31 +1241,15 @@ ________________________________________________________
 //9. Pattern 3\\
 
 const prompt = require("prompt-sync")();
-const number = parseInt(prompt("Input a number in order to create a right pascal star pattern: "));
-let string = "";
+let number = parseInt(prompt("Give number: "));
 let i = 1;
 
 while (i <= number) {
-    let j = 0;
-    while (j < i) {
-        string += "*";
-        j++;
-    }
-    string += "\n";
-    i++;
-}
-i = 1;
-while (i <= number - 1) {
-    let j = 0;
-    while (j < number - i) {
-        string += "*";
-        j++;
-    }
-    string += "\n";
-    i++;
-}
-
-console.log(string)
+    console.log("*".repeat(i++));
+};
+while (number >= 1) {
+    console.log("*".repeat(--number));
+};
 
 ________________________________________________________
 //10. Fibonacci sequence\\
@@ -1287,3 +1271,4 @@ console.log(fibonacci(number));
 
 ________________________________________________________
 */
+
