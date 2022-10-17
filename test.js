@@ -1270,5 +1270,178 @@ function fibonacci(n) {
 console.log(fibonacci(number));
 
 ________________________________________________________
-*/
+//Array\\
 
+const schoolSubjects = [
+    "Computer technology and network technology",
+    "Mathematic",
+    "Network technology",
+    "Swedish",
+    "English",
+    "Network communication",
+    "Programming",
+];
+
+console.log("\nSchool subjects:")
+
+for (let subject of schoolSubjects) {
+    console.log(subject);
+};
+
+________________________________________________________
+//Array.prototype.length()\\
+
+const companies = ['Apple', 'Google', 'Microsoft', 'Meta'];
+
+console.log(companies.length);
+
+//Returnerar mängden element i en array eller en string
+
+________________________________________________________
+//Array.prototype.at()\\
+
+const games = [
+    "Minecraft",
+    "Fall Guys",
+    "Dota 2",
+    "League of Legends",
+    "Rocket League"
+];
+
+let index = 2;
+
+console.log(`Using an index of ${index} the item returned is ${games.at(index)}`);
+
+index = -2;
+
+console.log(`Using an index of ${index} item returned is ${games.at(index)}`);
+
+//Array.prototype.at() metoden används för att returna värdet på en viss index i en array. Kan användas med negativa tal
+
+________________________________________________________
+//Array.prototype.concat(concatArray)\\
+
+const countries = ['Sweden', 'Iran', 'United States of America'];
+const countryCodes = ['+46', '+98', '+1'];
+const mergedArray = countries.concat(countryCodes);
+
+console.log(mergedArray);
+
+//Sammanfogar 2 eller fler arrays med varandra 
+
+________________________________________________________
+//Array.prototype.copyWithin(target, start, end)\\
+
+const bestCompanies = ['Tesla', 'Google', 'Microsoft', 'AMD', 'Apple'];
+console.log(bestCompanies)
+
+console.log(bestCompanies.copyWithin(0, 2));
+console.log(bestCompanies.copyWithin(0, 2, 3));
+
+// copyWithin(target, start, end) target är den index man ville klistra in det man kopierat, start är den index då man vill kopiera, end är den index få man vill avsluta kopieringen kan likna att man markerar texten sedan (ctrl + C och ctrl + V) 
+
+________________________________________________________
+//Array.prototype.fill(value, start, end)\\
+
+const ages = [18, 6, 16, 80, 68];
+
+console.log(ages.fill(18, 1));
+
+//Fyller array med 18 från index 1 i en array
+
+________________________________________________________
+//Array.prototype.flat(repeat)\\
+
+const array = ["Food", "Cars", "Trees", [[["Cabbage", "Meat"]]]];
+
+console.log(array.flat(2));
+
+//Tar ut subarrays från deras nuvarande array x antal gånger
+
+________________________________________________________
+//Array.prototype.includes(searchIndex, start)\\
+
+const numbers = [1, 2, 3];
+
+console.log(numbers.includes(2)); // True
+console.log(numbers.includes(17)); // False
+
+const exoticAnimals = ['ape', 'racoon', 'bat'];
+
+console.log(exoticAnimals.includes('ape')); // True
+
+// Söker arrayen för att se ifall ett specifikt element existerar inuti den
+
+________________________________________________________
+//Array.prototype.indexOf(searchElement, fromIndex)\\
+
+const movies = ['Athena', 'Prey', 'Jurassic World', 'Pinocchio', 'Spencer'];
+
+console.log(movies.indexOf('Prey'));
+console.log(movies.indexOf('Sune i Grekland'));
+
+// Söker arrayen för att se ifall ett specifikt element existerar inuti den och sedan returnerar dess index värde
+________________________________________________________
+//Array.prototype.join(separator)\\
+
+const devices = ['Computer', 'Smartphone', 'Laptop'];
+
+console.log(devices.join());
+console.log(devices.join(''));
+console.log(devices.join('-'));
+
+//Sammanfogar alla index till ett ord där man kan välja vad som ska vara mellan varje index
+
+________________________________________________________
+//Array.prototype.push(elementX)\\
+
+const linuxDistributions = ['Zorin OS', 'Ubuntu', 'CuteFish OS'];
+
+linuxDistributions.push('Manjaro', 'Kali', 'Deepin');
+console.log(linuxDistributions);
+
+// push() lägger till en eller flera element i en array och returnerar den nya array:en
+
+________________________________________________________
+//Array.prototype.pop()\\
+
+const personalComputerBrands = ['Dell', 'HP', 'Lenovo', 'Asus', 'Vaio'];
+
+console.log(personalComputerBrands.pop());
+console.log(personalComputerBrands);
+
+//pop() tar bort det sistsa elementet i en array och returnerar värdet på det sistsa elementet
+
+________________________________________________________
+//Array.prototype.slice(start, end)\\
+
+const phones = ['iPhone 14', 'Google Pixel 7', 'Samsung S22', 'ASUS ROG', 'Xiaomi'];
+
+console.log(phones.slice(0, 2));
+
+//Med slice() kan man välja vad för något i en array man vill ha genom att ange ett startvärde eller startvärde & slutvärde
+
+________________________________________________________
+//Array.prototype.sort(compareFn)\\
+
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+
+const numbers = [1, 30, 4, 21, 100000];
+numbers.sort();
+console.log(numbers);
+
+//sort() har möjligheten att sortera månader, bokstäver och nummer i kronologisk ordning.
+
+________________________________________________________
+//Array.prototype.splice(start, deleteCount, item1, item2, itemN)\\
+
+const dishes = ['Djoje kabab', 'Kabab koobideh', 'Gheimeh', 'Baghali Polo'];
+dishes.splice(2, 2, 'Havij polo', 'Ghorme sabzi');
+console.log(dishes);
+
+// splice(start, deleteCount) använder man om man vill byta elemement med något annat. Den lägger först till ditt element sedan kan man välja hur många element efter start-indexen som skall raderas
+
+________________________________________________________
+*/
