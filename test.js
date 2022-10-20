@@ -1444,4 +1444,70 @@ console.log(dishes);
 // splice(start, deleteCount) använder man om man vill byta elemement med något annat. Den lägger först till ditt element sedan kan man välja hur många element efter start-indexen som skall raderas
 
 ________________________________________________________
+//Skapa en funktion som lägger till ett element i en array och returnerar arrayen\\
+ 
+const prompt = require("prompt-sync")();
+ 
+function returnNewArray(array, userInput) {
+    return array.push(userInput);
+};
+ 
+console.log(returnNewArray([], prompt("Input something in your new string: ")));
+
+________________________________________________________
+//Skapa en funktion som tar ut det sista elementet i en array\\
+ 
+function removeLastElement(array) {
+    return array.pop();
+};
+ 
+const array = [5, 4, 2, 1]
+ 
+console.log(removeLastElement(array))
+
+________________________________________________________
+//Skapa en funktion som tar in en array av bokstäver och lägger ihop dem till en sträng\\
+ 
+function joinCharactersInArray(array) {
+    return array.join('');
+};
+ 
+const array = ["G", "O", "O", "G", "L", "E"];
+ 
+console.log(joinCharactersInArray(array))
+
+________________________________________________________
+//Skapa en funktion som konverterar en array med siffror i meter till kilometer\\
+ 
+function convertMeterToKilometer(array) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        newArray.push(`${array[i] / 1000} km`);
+    };
+    return newArray;
+};
+ 
+const meterArray = [100, 1000];
+ 
+console.log(convertMeterToKilometer(meterArray));
+
+________________________________________________________
+//Skapa en funktion som tar summan av siffror i en array.\\
+ 
+let sum = 0;
+ 
+function sumArray(array) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i]
+    };
+    return sum;
+};
+ 
+const numbers = [100, 20, 3];
+ 
+console.log(sumArray(numbers));
+
+________________________________________________________
+
 */
