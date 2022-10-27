@@ -1509,5 +1509,111 @@ const numbers = [100, 20, 3];
 console.log(sumArray(numbers));
 
 ________________________________________________________
+//Objects\\
 
+function personFunction(name, age, height) {
+    this.name = name;
+    this.age = age;
+    this.height = height;
+};
+
+const person1Function = new personFunction("Ramin Samadi", 17, `${170} cm`);
+console.log(person1Function);
+
+class person {
+    constructor(name, age, height) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+    };
+};
+
+const person1 = new person("Ramin Samadi", 17, `${170} cm`);
+console.log(person1);
+
+________________________________________________________
+//1. Skapa objekt för bilar med dessa attribut. De skapas på olika sätt\\
+
+const cars = {
+    car1: {brand: "Volvo", model: "s60", year: 2019, owner: "Dag John"},
+    car2: {brand: "Mercedes", model: "s60", year: 2021, owner: "Halv Frej"},
+    car3: {brand: "BMW", model: "i8", year: 2022, owner: "Evert Orvar"},
+};
+
+________________________________________________________
+//2. Använd en for loop för att skriva ut attributen av bilarna\\
+
+const cars = {
+    car1: {brand: "Volvo", model: "s60", year: 2019, owner: "Dag John"},
+    car2: {brand: "Mercedes", model: "s60", year: 2021, owner: "Halv Frej"},
+    car3: {brand: "BMW", model: "i8", year: 2022, owner: "Evert Orvar"},
+};
+ 
+for (let car in cars) {
+    console.log(`Det här är en ${cars[car].brand} ${cars[car].model} tillverkat år ${cars[car].year} och föraren är ${cars[car].owner}`);
+};
+
+________________________________________________________
+//3. Skapa nu objekten med hjälp av en constructor function\\
+
+function Car(brand, model, year, owner) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+    this.owner = owner;
+};
+ 
+const cars = {
+    1: new Car("Volvo", "s60", 2019, "Dag John"),
+    2: new Car("Mercedes", "s60", 2021, "Halv Frej"),
+    3: new Car("BMW", "i8", 2022, "Evert Orvar")
+};
+
+________________________________________________________
+//4. Skapa en klass som representerar en cirkel och kan beräkna area och omkretsen av en cirkel\\
+
+class Circle {
+    constructor(radius) {
+        this.radius = radius;
+    };
+ 
+    getArea() {
+        return (3.14 * Math.pow(this.radius, 2)).toFixed(2);
+    };
+ 
+    getCircumference() {
+        return (2 * 3.14 * this.radius).toFixed(2);
+    }
+};
+
+________________________________________________________
+//5. Skapa en funktion som tar en array med cirkel objekt och returnerar cirklar med area större än 350\\
+
+class Circle {
+    constructor(radius) {
+        this.radius = radius;
+    };
+ 
+    getArea() {
+        return (3.14 * Math.pow(this.radius, 2)).toFixed(2);
+    };
+ 
+    getCircumference() {
+        return (2 * 3.14 * this.radius).toFixed(2);
+    }
+};
+ 
+const circles = [
+    new Circle(500), new Circle(1), new Circle(103)
+];
+ 
+function areaLargerThan350() {
+    for (let i = 0; i < circles.length; i++) {
+        if (circles[i].getArea() > 350) {
+            console.log(`index ${i} of the circle's area which is equal to ${circles[i].getArea()} is larger than 350`);
+        };
+    };
+} ;
+ 
+areaLargerThan350();
 */
