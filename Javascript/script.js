@@ -1617,5 +1617,3 @@ function areaLargerThan350() {
  
 areaLargerThan350();
 */
-
-console.log("Hello World!");
