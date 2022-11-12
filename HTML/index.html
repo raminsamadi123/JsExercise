@@ -1,10 +1,4 @@
-<!--
-    HTML = Hyper Text Markup Language
-    CSS = Cascading Style Sheet
--->
-
-
-<!-- HTML Headings -->
+<!-- Hyper Text Markup Language Headings -->
 <html></html>                                                           <!-- Defines the root of an HTML document -->
 <body></body>                                                           <!-- Defines the document's body -->
 <h1> to </h6>                                                           <!-- Defines HTML headings -->
@@ -69,7 +63,91 @@
 
 <p style="color: rgb(255, 0, 0);">RGB</p>                             <!-- Red-Green-Blue -->
 <p style="color: #ff0000;">HEX</p>                                    <!-- Hexadecimal Color #RRGGBB -->
-<p style="color: hsl(0, 100%, 50%);">HSL</p>                          <!-- Hue-Saturation-Lightness -->
+<p style="color: hsl(0, 100%, 50%);">HSL</p>                          <!-- Hue-Saturation-Lightness (Hue 0 = Red 120 = Green 240 = Blue) -->
 
 <p style="color: rgba(255, 0, 0, .5)">RGBA</p>                        <!-- Red-Green-Blue-Alpha -->
 <p style="color: hsla(0, 100%, 50%, .5);">HSLA</p>                    <!-- Hue-Saturation-Lightness-Alpha -->
+
+
+<!-- HTML Styles - Cascading Style Sheets -->
+<p style="color: red;">Inline CSS</p>                                 <!-- Applies a unique style to a single HTML element -->
+
+<html>
+    <head>
+        <style>
+            p {
+                color: blue;
+                font-family: Verdana;
+                font-size: medium;
+                border: 2px solid black;
+                padding: 10px;
+                margin: 50px;
+            }
+                                                 
+        </style>                                                        <!-- Defines style information for an HTML document -->                                                    
+    </head>
+
+    <body>
+        <p>Internal CSS</p>                                             <!-- Defines a style for a single HTML page in the <head> section of an HTML page, within a <style> element -->
+    </body>
+</html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">                       <!-- Defines a link between a document and an external resource -->  
+    </head>
+    
+    <body>
+        <p>External CSS</p>                                             <!-- Defines the style for many HTML pages, add a link to it in the <head> section of each HTML page -->
+    </body>
+</html>
+
+<!--
+    Use the HTML style attribute for inline styling
+    Use the HTML <style> element to define internal CSS
+    Use the HTML <link> element to refer to an external CSS file
+    Use the HTML <head> element to store <style> and <link> elements
+    Use the CSS color property for text colors
+    Use the CSS font-family property for text fonts
+    Use the CSS font-size property for text sizes
+    Use the CSS border property for borders
+    Use the CSS padding property for space inside the border
+    Use the CSS margin property for space outside the border
+-->
+
+
+<!-- HTML Links -->
+<a href="https://www.example.com" target="_blank">Absolute URL</a>
+<a href="/HTML/styles.css" target="_self">Relative URL</a>
+
+<a href="https://www.example.com/" target="_blank">
+    <img src="Pictures/link.png" alt="HTML tutorial" width="20">
+</a>
+
+<a href="mailto:email@example.com">Send email</a>
+
+<button onclick="document.location='https://www.example.com'">Button Link</button>
+
+<a href="https://www.example.com" title="Head over to example.com">Link</a>
+
+<p id="H1">Header 1</p>
+<a href="index.html#H1" target="_blank">Jump to Header 1</a>
+
+<!-- 
+    [TARGET ATTRIBUTE]
+        _self - Default. Opens the document in the same window/tab as it was clicked
+        _blank - Opens the document in a new window or tab
+        _parent - Opens the document in the parent frame
+        _top - Opens the document in the full body of the window
+
+    [Ways to create links]
+        Use the <a> element to define a link
+        Use the href attribute to define the link address
+        Use the target attribute to define where to open the linked document
+        Use the <img> element (inside <a>) to use an image as a link
+        Use the mailto: scheme inside the href attribute to create a link that opens the user's email program
+
+    [Bookmarks]
+        Use the id attribute (id="value") to define bookmarks in a page
+        Use the href attribute (href="#value") to link to the bookmark
+-->
