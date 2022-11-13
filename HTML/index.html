@@ -164,6 +164,54 @@
     <img src="./Pictures/steampunk.gif" alt="steampunk" style="float: left;width:50px;height:30px"> <!-- Lets the image float to the left or to the right -->
 </p>
 
+<img src="./Pictures/workplace.jpg" alt="Workplace" usemap="#workmap">
+<map name="workmap">
+    <area shape="rect" coords="34, 44, 270, 350" href="https://sv.wikipedia.org/wiki/Macbook" alt="Macbook">
+    <area shape="rect" coords="290, 172, 333, 250" href="https://en.wikipedia.org/wiki/IPhone" alt="iPhone">
+    <area shape="circle" coords="337, 300, 44" href="https://en.wikipedia.org/wiki/Coffee" alt="coffe">
+</map>
+
+<p 
+    style="
+        background-image: url('./Pictures/workplace.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    "
+>
+    You can specify background images<br>
+    for any visible HTML element.<br>
+    In this example, the background image<br>
+    is specified for a p element.<br>
+    By default, the background-image<br>
+    will repeat itself in the direction(s)<br>
+    where it is smaller than the element<br>
+    where it is specified. (Try resizing the<br>
+    browser window to see how the<br>
+    background image behaves.
+</p>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="./Pictures/link.png">
+        <source media="(min-width: 465px)" srcset="./Pictures/steampunk.gif">
+        <img src="./Pictures/tech_pixabay.jpg">
+    </picture>
+</html>
+
+<!--
+    Tag         Description
+    <img>       Defines an image
+    <map>       Defines an image map
+    <area>      Defines a clickable area inside an image map
+    <picture>   Defines a container for multiple image resources
+-->
+
 <!--
     Supported HTML 5 File Extensions:
         .apng
@@ -174,3 +222,15 @@
         .svg
 -->
 
+
+<!-- HTML Favicon -->
+<!DOCTYPE html>
+<html>
+    <title></title>
+    <head>       
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+</html>
+
+
+<!-- HTML Tables -->
