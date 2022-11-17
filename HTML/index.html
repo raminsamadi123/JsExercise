@@ -123,12 +123,7 @@
         <head>
             <style>
                 p {
-                    color: blue;
                     font-family: Verdana;
-                    font-size: medium;
-                    border: 2px solid black;
-                    padding: 10px;
-                    margin: 50px;
                 }
                                                     
             </style>                                                        <!-- Defines style information for an HTML document -->                                                    
@@ -224,6 +219,8 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+            border-radius: 50px;
+            padding: 20px;
         "
     >
         You can specify background images<br>
@@ -281,50 +278,318 @@
 
 
 <!-- HTML Tables -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            table, th, td {
-                border: 1px solid black;
-                border-collapse: collapse;
-                border-style: dashed;
-                border-color: red;
-                background-color: white;
-            }
-            /* Table Rounded Corners
-            th, td {
-                border: 1px solid black;
-                background-color: white;   
-                border-radius: 10px;
-            }
-            */
-        </style>
-    </head>
-    <body>
-        <br><br>
-        <table style="width: 300px;">
-            <caption>Network</caption>
-            <tr>
-                <th>Device</th>
-                <th>IP-address</th>
-            </tr>
-            <tr>
-                <td>Computer1</td>
-                <td>192.168.0.2</td>
-            </tr>
-            <tr>
-                <td>Phone1</td>
-                <td>192.168.0.3</td>
-            </tr>
-        </table>
-    </body>
-</html>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                table, th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    border-style: dashed;
+                    border-color: red;
+                    padding: 15px;
+                    background-color: white;
+                }
+                tr:hover {
+                    color: red;
+                }
+                /* Table Rounded Corners
+                th, td {
+                    border: 1px solid black;
+                    background-color: white;   
+                    border-radius: 10px;
+                }
+                */
+            </style>
+        </head>
+        <body>
+            <br><br>
+            <table style="width: 300px;">
+                <caption>Caption</caption>
+                <tr>
+                    <th>Table Header 1</th>
+                    <th>Table Header 2</th>
+                </tr>
+                <tr>
+                    <td>Table Data 1</td>
+                    <td>Table Data 2</td>
+                </tr>
+                <tr>
+                    <td>Table Data 3</td>
+                    <td>Table Data 4</td>
+                </tr>
+            </table>
+        </body>
+    </html>
 
-<!--
-    <table> - Defines a table
-    <tr> - Defines a row in a table
-    <th> - Defines a header cell in a table
-    <td> - Defines a cell in a table
--->
+    <!--
+        <table> - Defines a table
+        <caption> - Defines a table caption
+        <colgroup> - Specifies a group of one or more columns in a table for formatting
+        <col> - Specifies column properties for each column within a <colgroup> element
+        <tr> - Defines a row in a table
+        <th> - Defines a header cell in a table
+        <td> - Defines a cell in a table
+    -->
 
+
+<!-- HTML Lists -->
+    <ul style="list-style-type: disc;">
+        <li>Unordered List</li>    
+        <ul style="list-style-type: circle;">
+            <li>Nested Unordered List</li>
+        </ul>
+    </ul>
+
+    <ol start="1" style="list-style-type:decimal;">
+        <li>Ordered List</li>
+        <ol style="list-style-type: lower-latin;">
+            <li>Nested Ordered List</li>
+        </ol>
+    </ol>
+
+    <dl>
+        <dt>Description Term</dt>
+        <dd>Description Details</dd>
+    </dl>
+
+    <!--
+        <ul> - Defines an unordered list
+        <ol> - Defines an ordered list
+        <li> - Defines a list item
+        <dl> - Defines a description list
+        <dt> - Defines a term in a description list
+        <dd> - Describes the term in a description list
+    -->
+
+
+<!-- HTML Block and Inline Elements -->
+    <div style="border: 1px solid black;">Block-level Element</div>
+
+    <!-- Block-level elements in HTML:
+        <address>       <article>       <aside>
+        <blockquote>    <canvas>        <dd>
+        <div>           <dl>            <dt>
+        <fieldset>      <figcaption>    <figure>
+        <footer>        <form>          <h1>
+        <header>        <hr>            <li>
+        <main>          <nav>           <noscript>
+        <ol>            <p>             <pre>
+        <section>       <table>         <tfoot>
+        <ul>            <video>
+    -->
+
+    <span style="border: 1px solid black">Inline Element</span>
+
+    <!-- Inline elements in HTML:
+        <a>         <abbr>      <acronym>
+        <b>         <bdo>       <big>
+        <br>        <button>    <cite>
+        <code>      <dfn>       <em>
+        <i>         <img>       <input>
+        <kbd>       <label>     <map>
+        <object>    <output>    <q>
+        <samp>      <script>    <select>
+        <small>     <span>      <strong>
+        <sub>       <sup>       <textarea>
+        <time>      <tt>        <var>
+    -->
+
+    <!DOCTYPE html>
+    <html>
+        <body>
+            <br><br>
+            <div style="background-color: black;color: white; padding: 20px;border-radius: 50px;">
+                <h1>The <\div> element</h1>
+                <p>
+                    The div element is often used as a container 
+                    for other HTML elements. <br>
+                    <br>
+                    The div element has no required attributes, but style, class and id
+                    are common. <br>
+                    <br>
+                    When used together with CSS, the div element can be used to style blcoks of content
+                </p>
+            </div>
+        </body>
+    </html>
+
+    <!DOCTYPE html>
+    <html>
+        <body>
+            <h1>The <\span> element</h1>
+            <p>
+                My mother has <span style="color: blue;font-weight: bold;">blue</span> eyes and 
+                my father has <span style="color: darkolivegreen;font-weight: bold;">dark green</span> eyes
+            </p>
+        </body>
+    </html>
+
+    <!-- Summary:
+        There are two display values: block and inline
+        A block-level element always starts on a new line and takes up the full width available
+        An inline element does not start on a new line and it only takes up as much width as necessary
+        The <div> element is a block-level and is often used as a container for other HTML elements
+        The <span> element is an inline container used to mark up a part of a text, or a part of a document
+    -->
+
+    <!--
+        <div> - Defines a section in a document (block-level)
+        <span> - Defines a section in a document (inline)
+    -->
+
+
+<!-- HTML class Attribute -->
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                .halloween {
+                    background-color: orangered;
+                    color: yellow;
+                    border: 2px solid black;
+                    border-radius: 30px;
+                    margin: 20px;
+                    padding: 20px;
+                }
+                .batman {
+                    background-color: yellow;
+                    color: black;
+                    font-weight: bold;
+                    border: 2px solid black;
+                    border-radius: 30px;
+                    margin: 20px;
+                    padding: 20px;
+                }
+                .main {
+                    text-align: center;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="halloween">
+                <h2>Halloween is here!</h2>
+                <p>This is a halloween theme using classes</p>
+            </div>
+            <div class="batman">
+                <h2 class="batman main">Batman is here!</h2>
+                <p>This is a batman theme using classes</p>
+            </div>
+            <p>my <span class="batman">batman</span> text</p>
+            <br>
+            <button onclick="classFunction()">Hide Halloween</button>
+            <script>
+                function classFunction() {
+                    const x = document.getElementsByClassName("halloween");
+                    for (let i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    };
+                };
+            </script>
+        </body>
+    </html>
+
+    <!--
+        The syntax for a class is: write a dot (.), followed by a class name. Then, define the CSS properties within curly braces {}.
+    -->
+
+
+<!-- HTML id Attribute -->
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                #myHeader {
+                    background-color: grey;
+                    border-radius: 40px;
+                    color: black;
+                    padding: 40px;
+                    text-align: center;
+                }
+            </style>
+        </head>
+        <body>
+            <h1 id="myHeader">MyHeader ID</h1>
+            <button onclick="displayResult()">Change text</button>
+            <script>
+                function displayResult() {
+                    document.getElementById("myHeader").innerHTML = "Magic!";
+                };
+            </script>
+        </body>
+    </html>
+
+    <a href="index.html#myHeader">Jump to Header 1</a>
+
+    <!--
+        The syntax for classes are: write a hash character (#), followed by an id name. Then, define the CSS properties within curly braces {}.
+        A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page.
+    -->
+
+
+<!-- HTML Iframes -->
+    <!-- Syntax
+        <iframe src="url" title="description"></iframe>
+    -->
+    <iframe name="iframe_a" src="https://www.example.com/" style="width: 300px;height: 200px;border: 1px solid black;border-radius: 10px;" title="Iframe Example"></iframe>
+    <p><a href="./testIndex.html" target="iframe_a">testIndex.html</a></p>
+
+    <!--
+        <iframe> - Defines an inline frame
+    -->
+
+
+<!-- HTML JavaScript -->
+    <button type="button" onclick="displayDateAndTime()">Click to display Date & Time</button>
+    <script>
+        function displayDateAndTime() {
+            document.getElementById('P1').innerHTML = Date();
+            setTimeout(function(){
+                const p1 = document.getElementById('P1');
+                p1.style.color = "white";
+                p1.style.backgroundColor = "black";
+                p1.style.border = "1px solid black";
+                p1.style.borderRadius = "20px";
+                p1.style.margin = "20px";
+                p1.style.padding = 10;
+                p1.style.textAlign = "center";
+                p1.style.width = 300;
+            }, 2000);
+        };
+    </script>
+    <p id="P1"></p>
+
+    <!DOCTYPE html>
+    <html>
+        <body>
+            <script>
+                function light(value) {
+                    let pic;
+                    
+                    if (value == 0) {
+                        pic = "./Pictures/pic_bulboff.jpeg"
+                    } else {
+                        pic = "./Pictures/pic_bulbon.jpeg"
+                    };
+                    document.getElementById('bulb').src = pic;
+                };
+            </script>
+
+            <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+            <img id="bulb" src="./Pictures/pic_bulboff.jpeg" alt="bulb off" style="width: 100px;height: 180px;">
+        
+            <p>
+                <button type="button" onclick="light(1)">Light On</button>
+                <button type="button" onclick="light(0)">Light Off</button>
+            </p>
+        </body>
+    </html>
+
+    <!--
+        <script> - Defines a client-side script
+        <noscript> - Defines an alternate content for users that do not support client-side scripts
+    -->
+
+
+<!-- HTML File Paths -->

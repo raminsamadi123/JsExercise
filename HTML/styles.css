@@ -1,9 +1,10 @@
-/* [Paragraph] */
+/* [Paragraph]
 p {
-    color: blue;
+    color: black;
 }
+*/
 
-/* [Link] */
+/* [Link]
 a:link {
     color: green;
     background-color: transparent;
@@ -27,3 +28,4 @@ a:active {
     background-color: transparent;
     text-decoration: underline;
 }
+*/
