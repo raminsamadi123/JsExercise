@@ -1,3 +1,128 @@
+body {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    height: 100vh;
+    font-family: "Arial";
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#title {
+    margin: 0px;
+    font-size: 30px;
+}
+
+#name {
+    font-size: 50px;
+}
+
+#portraitID {
+    border-top-left-radius: 39px;
+    border-top-right-radius: 39px;
+    width: 135px;
+}
+
+.GUI {
+    background-color: #36393F;
+    padding: 80px;
+    margin: 80px;
+    justify-content: center;
+    border-radius: 33px;
+    height: 400px;
+    width: 600px;
+}
+
+.portrait {
+    display: flex;
+    margin: 50px 0px;
+    flex-flow: column wrap;
+    width: 135px;
+    height: 250px;
+    gap: 5px;
+    background-color: #1E2023;
+    box-shadow: 1px 1px 13px black;
+    border-radius: 20px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.contact {
+    display: flex;
+    height: 30px;
+    justify-content: space-around;
+}
+
+.contact a {
+    border-radius: 100%;
+}
+
+.contact img {
+    height: 33px;
+    border: 2px solid #5865F2;
+    border-radius: 100%;
+}
+
+#about {
+    margin: 10px 30px;
+    font-size: 40px;
+    font-weight: bold;
+    width: 400px;
+}
+
+#jobTitle {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.aboutDescription {
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    background-color: #1E2023;
+    padding: 1px 15px;
+    border-radius: 19px;
+    margin: 120px 170px;
+    width: 450px;
+    height: 133px;
+}
+
+.enterEmail {
+    margin: -45px 220px;
+    background-color: #36393F;
+    height: 30px;
+    width: 240px;
+    border-radius: 19px;
+}
+
+#inputField {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: none;
+    height: 30px;
+    width: 160px;
+    margin: 0px 5px;
+    outline: none;
+}
+
+.hireButton {
+    margin: -26px 180px; 
+    width: 300px;
+}
+
+.hireButton a {
+    text-decoration: none;
+    background: #5865F2;
+    color: #FFFFFF;
+    font-size: 13px;
+    padding: 5px 5px;
+    border-radius: 19px;
+}
+
 /* [Paragraph]
 p {
     color: black;
