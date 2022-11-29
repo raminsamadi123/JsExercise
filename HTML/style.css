@@ -32,6 +32,7 @@ body {
     padding: 80px;
     margin: 80px;
     justify-content: center;
+    position: fixed;
     border-radius: 33px;
     height: 400px;
     width: 600px;
@@ -88,7 +89,7 @@ body {
     border-radius: 19px;
     margin: 120px 170px;
     width: 450px;
-    height: 133px;
+    height: 140px;
 }
 
 .enterEmail {
