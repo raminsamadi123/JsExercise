@@ -43,7 +43,7 @@ body {
     margin: 50px 0px;
     flex-flow: column wrap;
     width: 135px;
-    height: 250px;
+    height: 260px;
     gap: 5px;
     background-color: #1E2023;
     box-shadow: 1px 1px 13px black;
@@ -54,16 +54,18 @@ body {
 
 .contact {
     display: flex;
-    height: 30px;
+    height: 50px;
     justify-content: space-around;
 }
 
 .contact a {
+    display: flex;
+    align-items: center;
     border-radius: 100%;
 }
 
 .contact img {
-    height: 33px;
+    height: 34px;
     border: 2px solid #5865F2;
     border-radius: 100%;
 }
@@ -92,6 +94,10 @@ body {
     height: 140px;
 }
 
+.aboutDescription a {
+    color: #8AB4F8;
+}
+
 .enterEmail {
     margin: -45px 220px;
     background-color: #36393F;
@@ -111,47 +117,17 @@ body {
 }
 
 .hireButton {
-    margin: -26px 180px; 
-    width: 300px;
+    margin: -29px 170px; 
+    width: 64px;
+    height: 24px;
 }
 
-.hireButton a {
-    text-decoration: none;
-    background: #5865F2;
-    color: #FFFFFF;
-    font-size: 13px;
-    padding: 5px 5px;
+.hireButton button {
+    height: 24px;
+    width: 64px;
+    color: white;
+    cursor: pointer;
     border-radius: 19px;
+    border: none;
+    background-color: #5865F2;
 }
-
-/* [Paragraph]
-p {
-    color: black;
-}
-*/
-
-/* [Link]
-a:link {
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-a:visited {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-}
-*/
