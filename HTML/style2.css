@@ -8,6 +8,10 @@ html, body {
   flex-flow: column wrap;
 }
 
+p {
+  color: #FF0000;
+}
+
 h1 {
   font-size: 100px;
 }
