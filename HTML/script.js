@@ -2,13 +2,13 @@ function startQuiz() {
   var questions = [
   {
     title: "Är månen kall?",
-    alternative1: "Q1A1",
-    alternative2: "Q1A2",
+    alternative1: "Ja",
+    alternative2: "Nej",
   },
   {
     title: "Är solen varm?",
-    alternative1: "Q2A1",
-    alternative2: "Q2A2",
+    alternative1: "Ja",
+    alternative2: "Nej",
   }
   ];
 
