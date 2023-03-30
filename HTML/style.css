@@ -31,7 +31,7 @@ body {
     background-color: #36393F;
     padding: 80px;
     margin: 80px;
-    justify-content: center;
+    justify-content: start;
     position: fixed;
     border-radius: 33px;
     height: 400px;
