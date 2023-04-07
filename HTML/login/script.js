@@ -52,7 +52,7 @@ function login() {
   if (users.hasOwnProperty(username) && users[username] === password) { // Does users contain username and is username's property equal to password?
     alert("Login Succeeded");
   } else { // Both of the conditions above were false
-    alert("Login Failed");
+    alert("Wrong username or password. Try again.");
   };
 };
 
