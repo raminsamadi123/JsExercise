@@ -19,7 +19,7 @@ function login() {
   };
 
   if (users.hasOwnProperty(username) && users[username] === password) { // Does users contain username and is username's property equal to password?
-    alert("Login Succeeded");
+    location.href = "/HTML/testIndex.html"
   } else { // Both of the conditions above were false
     alert("Wrong username or password. Try again.");
   };
