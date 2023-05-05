@@ -1,0 +1,30 @@
+<!--
+LINK: https://github.com/raminsamadi123/Programming/blob/main/HTML/login/index.html
+NAME: index.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signup</title>
+  <link href="styles_register.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="signup_page">
+    <div id="container">
+      <h1 id="title">Signup</h1>
+      <input id="username" type="text" name="username" placeholder="Enter your username.."
+        onkeydown="submitOnEnter(event)">
+      <input id="password" type="password" name="password" placeholder="Enter your password.."
+        onkeydown="submitOnEnter(event)">
+      <button onclick="login()" id="login_button" type="button">Login</button>
+    </div>
+  </div>
+  <script src="script_register.js"></script>
+</body>
+
+</html>
