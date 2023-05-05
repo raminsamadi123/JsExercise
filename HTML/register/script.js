@@ -1,30 +1,28 @@
 /*
-LINK: https://github.com/raminsamadi123/Programming/blob/main/HTML/login/script.js
+LINK: https://github.com/raminsamadi123/Programming/blob/main/HTML/register/script.js
 NAME: script.js
 */
 
 function submitOnEnter(event) {
-  if (event.keyCode === 13) {
-    login();
+  if (event.keyCode === 13) { // If the enter key (keyCode 13) is pressed then
+    login(); // Call the function login
   };
 };
 
 function login() {
   const username = document.getElementById("username").value; // Gets the value from the input element with username as its ID
   const password = document.getElementById("password").value; // Gets the value from the input element with password as its ID
-  const account = JSON.parse(localStorage.getItem("account_key"));
 
-  const users = [{"username":"admin","password":"admin"}];
-  users.push(account);
+  const users = JSON.parse(localStorage.getItem("accounts")); // Get the item in "accounts" key and parse it using JSON
 
-  for (let i = 0; i < users.length; i++) { // Loop through the array "users" until users.length
-    if (username == users[i].username && password == users[i].password) { // If the user's username is in the array "users" and password is in the array "users"
-      alert("Hello");
-      console.log(users);
-      //location.href = "https://chat.openai.com";
-      return; // Stop the function
+  if (users !== null) { // Check if the array is not empty
+    for (let i = 0; i < users.length; i++) { // Loop through the array "users" until users.length
+      if (username == users[i].username && password == users[i].password) { // If the user's username is in the array "users" and password is in the array "users"
+        location.href = "https://chat.openai.com"; // Redirect client to https://chat.openai.com
+        return; // Stop the function
+      };
     };
-  };
+  }
   alert("Wrong username or password. Try again."); // Once the for loop has been executed then alert
 };
 
